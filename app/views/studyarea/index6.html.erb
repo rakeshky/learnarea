@@ -1,0 +1,42 @@
+<div id="main">
+<%= form_tag  studyarea_index6_path,:method => 'get', :id => "persons_search" do %>
+  <p>
+<strong>    search by text:</strong><br><%= text_field_tag :search, params[:search] %><br>
+     <br><br><br>
+<strong>search by selection:</strong><br>
+     tutoring:<%=radio_button_tag :tutor_type,:tutoring%>
+      online:<%=radio_button_tag :tutor_type,:online %><br><br>
+<strong>search by option:</strong><br>
+<%= select_tag :experience, options_for_select(["select exp","<1 year","1 year","2 years","3 years","3 years and above"]) %><br><br>
+
+
+    <%= submit_tag "Search", :name => "search1" %>
+  </p>
+<%end%>
+</div>
+
+<div id="main1">
+<div id="person1">
+  <%=render "demo1"%>
+</div>
+<table cellspacing="2" border="2">
+<tr>
+<th>language</th>
+<th>experience</th>
+<th>training type</th>
+<th>add pay details</th>
+
+</tr>
+
+
+<tr>
+  <%for a in @values do%>
+<td><%=a.lang%></td>
+<td><%=a.exp%></td>
+<td><%=a.training_type%></td>
+<td><%=link_to "click to add pay details?click here.." ,:action=>"index7",:id=>a.id,:person=>a.personal_id%></td>
+</tr>
+<%end%>
+
+
+</div>

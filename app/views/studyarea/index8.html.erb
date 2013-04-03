@@ -1,0 +1,43 @@
+
+<%= form_tag studyarea_index8_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+    <div id="person2">
+    <%= render 'demo2' %>
+  </div>
+
+
+<%#= @values%>
+
+ <%#= @ab1=@values1.personal_id %>
+<%#logger.info"....123...#{@ab1}"%>
+
+<table cellspacing="2" border="2">
+
+
+<% for @s in @values do%>
+<tr>
+	
+<td><b>name:</b><%=@s.name%></td>
+<td><b>gender:</b><%=@s.gender%></td>
+<td><b>city:</b><%=@s.city%></td>
+<%@t=Studyarea.find_by_sql("select * from studyareas where personal_id='#{@s.id}'")%>
+<% for a in @t%>
+<td><b>language:</b><%=a.lang%></td>
+<td><b>experience:</b><%=a.exp%></td>
+<td><b>training type:</b><%=a.training_type%></td>
+
+<% @u=Paydetail.find_by_sql("select * from paydetails where studyarea_id='#{a.id}'")%>
+<%for b in @u%>
+<td><b>price:</b><%=b.price	%></td>
+<td><b>pay type:</b><%=b.pay_type	%></td>
+<td><b>ratings:</b><%=b.rating	%></td>
+
+<%end%>
+<%end%>
+</tr>
+<% end -%>
+</table>

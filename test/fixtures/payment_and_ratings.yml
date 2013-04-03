@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pay_type: MyString
+  price: MyString
+  rating: MyString
+
+two:
+  pay_type: MyString
+  price: MyString
+  rating: MyString

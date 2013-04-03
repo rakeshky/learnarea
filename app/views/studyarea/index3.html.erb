@@ -1,0 +1,24 @@
+<%= form_tag studyarea_index3_path, :method => 'get', :id => "persons_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => "search1" %>
+  </p>
+   <div id="person">
+    <%= render 'demo' %>
+  </div>
+<%end%>
+
+
+<table cellspacing="2" border="2">
+	<tr><td><%=sortable 'name'%></td>
+	<td><%=sortable 'id'%></td></tr>
+	
+<% for a in @person1 do%>
+<tr>
+<td><%= a.name %></td>
+
+<td><%=link_to "click to add courses",:action=>"index4",:id4=>a.id %></td>
+</tr>
+<% end -%>
+
+</table>

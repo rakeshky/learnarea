@@ -1,0 +1,28 @@
+
+<%=form_tag do%>
+
+<% if @p.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@p.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+    <ul>
+    <% @p.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+present id:<%=text_field_tag :id2 ,params[:id4],:readonly => true%>
+enter training type:<%= select_tag "trainingtype", options_for_select(["select type","tutoring","online"]) %><br>
+
+<br>
+enter experience :<%= select_tag "exp", options_for_select(["select exp","<1 year","1 year","2 years","3 years","3 years and above"]) %><br><br>
+
+enter language:<%= select_tag "lang", options_for_select(["select language","drupal","c","java","c++","ruby on rails","php","joomla","moodle"]) %><br>
+<br>
+<%=submit_tag :submit%>
+<%end%>
+
+<%= link_to "click to pay details" ,:action=>"index5",:id5=>params[:id4]%><br>
+
+<%= link_to "back to add courses" ,:action=>"index3"%>

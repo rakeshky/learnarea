@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lang: MyString
+  exp: MyString
+  training_type: MyString
+
+two:
+  lang: MyString
+  exp: MyString
+  training_type: MyString

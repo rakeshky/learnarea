@@ -1,0 +1,32 @@
+
+<%=form_tag do%>
+<br><br><br>
+<% if @in.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@in.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+    <ul>
+    <% @in.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+enter name:<%=text_field_tag :name%><br>
+<br>
+enter gender:
+male<%=radio_button_tag :gender,:male%>
+female<%=radio_button_tag :gender,:female%><br>
+<br>
+enter city:<%=text_field_tag :city%><br>
+<br>
+enter email:<%=email_field_tag :city%><br>
+
+<%=submit_tag :submit%>
+
+<%end%>
+
+
+<b><p style="color:red">Note: if you don't get id in current id field of next page on submit of the form, that means the same email already exist</p>
+</b>
+

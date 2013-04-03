@@ -1,0 +1,17 @@
+
+<%=form_tag do%>
+
+
+present id:<%=text_field_tag :id123,@b,:readonly => true%>
+ course id:<%= text_field_tag "course_id", @a,:readonly => true%>
+
+enter pay type::<%= select_tag "paytype", options_for_select(["select type of pay","per hour","per course","per month"]) %><br>
+<br>
+enter price:<%=text_field_tag :price%><br>
+<br>
+enter ratings::<%= select_tag "rating", options_for_select(["select ratings","1","2","3","4","5"]) %><br>
+<br>
+<%=submit_tag :submit%>
+<%end%>
+<%=link_to "want to add more pay details?click here.." ,:action=>"index6"%>
+

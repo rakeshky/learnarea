@@ -1,0 +1,16 @@
+
+<%=form_tag do%>
+present id:<%=text_field_tag :id12,@abc,:readonly => true%>
+<%= @area1.inspect%>
+select course:<%= select_tag "course_id", options_for_select(@area1.collect{|u| [u.lang,u.id] }),:prompt=>'select'%>
+
+enter pay type::<%= select_tag "paytype", options_for_select(["select type of pay","per hour","per course","per month"]) %><br>
+<br>
+enter price:<%=text_field_tag :price%><br>
+<br>
+enter ratings::<%= select_tag "rating", options_for_select(["select ratings","1","2","3","4","5"]) %><br>
+<br>
+<%=submit_tag :submit%>
+<%end%>
+<%=link_to "want to add more courses?click here.." ,:action=>"index1"%>
+

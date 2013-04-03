@@ -1,0 +1,6 @@
+
+<%=form_tag do%>
+
+select person:<%= select_tag "person", options_for_select(@aa1.collect{|u| [u.name,u.id] }),:prompt=>'select'%>
+<%=submit_tag :submit,:name=>"save1"%>
+<%end%>

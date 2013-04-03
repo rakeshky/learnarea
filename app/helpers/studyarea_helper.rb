@@ -1,0 +1,2 @@
+module StudyareaHelper
+end
