@@ -34,7 +34,7 @@ group :production do
 	  gem 'therubyracer-heroku'
   gem 'pg' ,'0.11'
   
-  gem 'thin'
+
 end
 
 # To use ActiveModel has_secure_password
