@@ -13,7 +13,7 @@ end
 gem 'json'
 gem 'devise'
 gem 'will_paginate'
-   gem 'sunspot_solr'
+gem 'sunspot_solr'
 gem 'progress_bar'
 gem 'sunspot_rails'
 # Gems used only for assets and not required
