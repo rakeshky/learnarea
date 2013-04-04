@@ -28,6 +28,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'heroku'
+gem 'activerecord-postgresql-adapter'
 gem 'jquery-rails'
 group :production do
 	  gem 'therubyracer-heroku'
