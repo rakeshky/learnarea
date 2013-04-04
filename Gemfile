@@ -27,12 +27,13 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'heroku'
 gem 'jquery-rails'
 group :production do
 	  gem 'therubyracer-heroku'
   gem 'pg'
-  gem 'postgres'
+  
+  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
