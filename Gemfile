@@ -32,7 +32,7 @@ gem 'activerecord-postgresql-adapter'
 gem 'jquery-rails'
 group :production do
 	  gem 'therubyracer-heroku'
-  gem 'pg'
+  gem 'pg' ,'0.11'
   
   gem 'thin'
 end
